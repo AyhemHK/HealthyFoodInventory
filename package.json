@@ -1,0 +1,32 @@
+{
+  "name": "healthyfoodinventory",
+  "version": "1.0.0",
+  "description": "database project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyhemHK/HealthyFoodInventory.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mysql"
+  ],
+  "author": "KC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AyhemHK/HealthyFoodInventory/issues"
+  },
+  "homepage": "https://github.com/AyhemHK/HealthyFoodInventory#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  }
+}

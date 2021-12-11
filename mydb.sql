@@ -230,7 +230,7 @@ insert into Product values
 ('11','Chicken Ceaser','5.99','30','2021-12-31','202','1','2','402'),
 ('12','Tuna Salad','6.99','40','2021-12-31','201','1','2','401'),
 ('13', 'Vegetable','4.49','28','2021-12-31','202','2','2','403'),
-('14','Steak and Cheese','8.99','2021-12-31','201','1','2','402'), -- end of wraps
+('14','Steak and Cheese','8.99','10','2021-12-31','201','1','2','402'), -- end of wraps
 ('15','Fountain drink', '2.19','400','2021-12-31','201','1','3','401'),
 ('16','Green Tea', '2.99','115','2021-12-31','201','1','3','402'),
 ('17','Water','0.99','1000','2021-12-31','202','2','3','401'), 
@@ -247,3 +247,8 @@ from Product;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+flush privileges;
+
