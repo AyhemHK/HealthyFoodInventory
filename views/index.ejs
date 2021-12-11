@@ -1,167 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>Healthy Food Inventory</title>
 
-    <link type="text/css" rel="stylesheet" href="../public/css/style.css" />
-  </head>
-  <body>
-    <header id="main-header" class="bg-success text-white p-4 mb-3">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Healthy Food Inventory</title>
+
+  <link type="text/css" rel="stylesheet" href="../public/css/style.css" />
+</head>
+
+<body>
+  <header id="main-header" class="bg-black text-white p-4 mb-3" >
+    <center>
       <h1 id="header-title">Healthy Food Inventory Management System</h1>
-    </header>
+    </center>
+  </header>
 
-    <div class="container">
-      <main>
-        <h2 class="title">
-          This project was a collaborative efforts of: 
-        </h2>
-        <u1 class = "lsit-group">
-            <li class="list-group-item">
-                <h4>Ayhem Hanna-Kachl, Alex Verhulst, Tyler Rossi, and Shubham KC</h4>
-            </li>
-        </u1>
+  <div class="container">
+    <main>
+      <h2 class="title">
+        This project was a collaborative efforts of:
+      </h2>
+      <u1 class="lsit-group">
+        <li class="list-group-item">
 
-        <br/>
 
-        </main>
-        <p>This web application was created using the following technologies</p>
-        <ul class="list-group">
-          <li class="list-group-item">Front End -- HTML, CSS, Vanilla JS</li>
-          <li class="list-group-item">
-            Back End -- Node.js with server-side framework express.js and
-            embedded javascript for server side content rendering
-          </li>
-          <li class="list-group-item">
-            Database -- MySQL server community edition version 8.0
-          </li>
-        </ul>
-      </main>
+          <h4>Ayhem Hanna-Kachl, Alex Verhulst, Tyler Rossi, and Shubham KC</h4>
+
+        </li>
+      </u1>
+    </main>
+
+    </ul>
+    </main>
+  </div>
+
+  <br />
+
+  <div class="container">
+    <h3>New Data, Let's Create It [CREATE]</h3>
+    <h4>Creating New Food Departments</h4>
+    <div id="main" class="card card-body">
+      <form class="form-inline mb-3" action="/insertdepartments/" method="post" id="CRUDcreate">
+        <label for="departmentID">Department ID: </label>
+        <input type="number" name="departmentID" placeholder="Enter The Department ID" size="200" required
+          autocomplete="off" class="form-control mr-2" />
+        <br />
+        <label for="departmentName">Department Name: </label>
+        <input type="text" name="departmentName" placeholder="Enter The Department Name" size="200" required
+          autocomplete="off" class="form-control mr-2" />
+        <br />
+        <input type="submit" value="SUBMIT" class="btn btn-dark" style="background-color:red;color:white;width:90px;height:40px;" />
+        <input type="reset" value="RESET" class="btn btn-dark" style="background-color:red;color:white;width:90px;height:40px;" />
+      </form>
     </div>
+  </div>
+  &nbsp;
 
-    <br/>
+  <div class="container">
+    <h3>Looking for something? Search it up! [READ]</h3>
+    <h4>Read Data from The Database</h4>
+    <div id="main" class="card card-body">
+      <form class="form-inline mb-3" action="/readdepartment" method="get" id="CRUDread">
 
-    <div class="container">
-      <h3>CRUD ops - CREATE</h3>
-      <h4>Creating New Food Departments</h4>
-      <div id="main" class="card card-body">
-        <form
-          class="form-inline mb-3"
-          action="/insertdepartments/"
-          method="post"
-          id="CRUDcreate"
-        >
-          <label for="departmentID">Department ID: </label>
-          <input
-            type="number"
-            name="departmentID"
-            placeholder="Enter The Department ID"
-            size="200"
-            required
-            autocomplete="off"
-            class="form-control mr-2"
-          />
-          <br />
-          <label for="departmentName">Department Name: </label>
-          <input
-            type="text"
-            name="departmentName"
-            placeholder="Enter The Department Name"
-            size="200"
-            required
-            autocomplete="off"
-            class="form-control mr-2"
-          />
-          <br />
-          <input type="submit" value="SUBMIT" class="btn btn-dark" />
-          <input type="reset" value="RESET" class="btn btn-dark" />
-        </form>
-      </div>
+        <label for="departmentID">Press <b>"Submit"</b> for Different Departments:</label>
+
+        <br>
+        <input type="submit" value="Search up DEPT ID's" class="btn btn-dark" style="background-color:red;color:white;width:230px;height:40px;" />
+        </br>
+
+        <br></bv>
+
+        <label for="departmentID">Search for specific prodcut info:</label>
+        <input type="text" name="departmentName" placeholder="Enter Product Name" size="200" required autocomplete="off"
+          class="form-control mr-2" />
+        <input type="submit" value="ENTER" class="btn btn-dark" style="background-color:red;color:white;width:230px;height:40px;"/>
+      </form>
     </div>
-
-    <div class="container">
-      <h3>CRUD ops - READ</h3>
-      <h4>Read Data from The Database</h4>
-      <div id="main" class="card card-body">
-        <form
-          class="form-inline mb-3"
-          action="/readdepartment"
-          method="get"
-          id="CRUDread"
-        >
-          <input type="submit" value="SUBMIT" class="btn btn-dark" />
-        </form>
-      </div>
+  </div>
+  &nbsp;
+  <div class="container">
+    <h3>Something off? Fix it here! [UPDATE]</h3>
+    <h4>Updating Information</h4>
+    <div id="main" class="card card-body">
+      <form action="/updatedepartment" method="post" id="CRUDupdate" class="crud">
+        <label for="departmentID">Search By Department ID: </label>
+        <input type="text" name="departmentID" placeholder="Enter Department ID" size="200" required autocomplete="off"
+          class="form-control mr-2" />
+        <br />
+        <label for="DepartmentNewName">Enter New Department Name: </label>
+        <input type="text" name="DepartmentNewName" placeholder="Enter New Department Name" size="200" required
+          autocomplete="off" class="form-control mr-2" />
+        <br />
+        <input type="submit" value="SUBMIT" class="btn btn-dark" style="background-color:red;color:white;width:230px;height:40px;"/>
+        <input type="reset" value="RESET" class="btn btn-dark" style="background-color:red;color:white;width:230px;height:40px;"/>
+      </form>
     </div>
-
-    <div class="container">
-      <h3>CRUD ops - UPDATE</h3>
-      <h4>Updating Department Information</h4>
-      <div id="main" class="card card-body">
-        <form
-          action="/updatedepartment"
-          method="post"
-          id="CRUDupdate"
-          class="crud"
-        >
-          <label for="departmentID">Search By Department ID: </label>
-          <input
-            type="text"
-            name="departmentID"
-            placeholder="Enter Department ID"
-            size="200"
-            required
-            autocomplete="off"
-            class="form-control mr-2"
-          />
-          <br />
-          <label for="DepartmentNewName">Enter New Department Name: </label>
-          <input
-            type="text"
-            name="DepartmentNewName"
-            placeholder="Enter New Department Name"
-            size="200"
-            required
-            autocomplete="off"
-            class="form-control mr-2"
-          />
-          <br />
-          <input type="submit" value="SUBMIT" class="btn btn-dark" />
-          <input type="reset" value="RESET" class="btn btn-dark" />
-        </form>
-      </div>
+  </div>
+  &nbsp;
+  <div class="container">
+    <h3>No longer exists. Delete it!</h3>
+    <h4>Deleting a Department</h4>
+    <div id="main" class="card card-body">
+      <form action="/deletedepartment" method="post" id="CRUDdelete" class="form-inline mb-3">
+        <label for="departmentName">Confirm Department Name For deletion: </label>
+        <input type="text" name="departmentName" placeholder="Enter The Department Name" size="200" required
+          autocomplete="off" class="form-control mr-2" />
+        <br />
+        <input type="submit" value="SUBMIT" class="btn btn-dark" style="background-color:red;color:white;width:230px;height:40px;" />
+        <input type="reset" value="RESET" class="btn btn-dark" style="background-color:red;color:white;width:230px;height:40px;" />
+      </form>
     </div>
+  </div>
+</body>
 
-    <div class="container">
-      <h3>CRUD ops - DELETE</h3>
-      <h4>Deleting a Department</h4>
-      <div id="main" class="card card-body">
-        <form
-          action="/deletedepartment"
-          method="post"
-          id="CRUDdelete"
-          class="form-inline mb-3"
-        >
-          <label for="departmentName">Confirm Department Name For deletion: </label>
-          <input
-            type="text"
-            name="departmentName"
-            placeholder="Enter The Department Name"
-            size="200"
-            required
-            autocomplete="off"
-            class="form-control mr-2"
-          />
-          <br />
-          <input type="submit" value="SUBMIT" class="btn btn-dark" />
-          <input type="reset" value="RESET" class="btn btn-dark" />
-        </form>
-      </div>
-    </div>
-  </body>
 </html>
