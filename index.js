@@ -66,7 +66,7 @@ app.post("/updatedepartment", (req, res) => {
   });
   
 
-app.get('/readdepartment',(req,res)=>{
+ app.get('/readdepartment',(req,res)=>{
     let sql = 'SELECT * FROM dept';
     db.query (sql,(err,result) =>{
         if (err){
