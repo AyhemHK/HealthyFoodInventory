@@ -11,9 +11,11 @@
 
     <link type="text/css" rel="stylesheet" href="../public/css/style.css" />
   </head>
-  <body>
-    <header id="main-header" class="bg-success text-white p-4 mb-3">
-      <h1>Healthy Food Inventory Management System</h1>
+  <body style="background-color: rgb(170, 191, 253);">
+    <header id="main-header" class="bg-black text-white p-4 mb-3">
+      <center>
+        <h1 id="header-title">Healthy Food Inventory Management System</h1>
+      </center>
     </header>
 
     <div class="container">
@@ -35,13 +37,15 @@
 
     <div class="container">
       <h3>CRUD ops - READ</h3>
-      <h4>Retrieving The Department IDs And Names</h4>
+      <h4>Retrieving The Product Information</h4>
       <div class="card card-body">
         <ul class="list-group">
-          <%data.forEach((item)=>{%>
-          <li class="list-group-item">
-            Department ID: <%=item.Dept_ID%> &nbsp; Department Name: <%= item.Dept_Name%>
-          </li>
+          <%data.forEach((item) => {%>
+        <li class="list-group-item">
+            ID: <%=item.Dept_ID%> &nbsp; Name: <%=item.Dept_Name%>
+            
+          
+        </li> 
           <%});%>
         </ul>
       </div>

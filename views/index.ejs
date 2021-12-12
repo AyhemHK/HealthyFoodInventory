@@ -62,13 +62,19 @@
       </form>
     </div>
   </div>
-  &nbsp;
+ 
 
   <div class="container">
     <h3>Looking for something? Search it up! [READ]</h3>
     <h4>Read Data from The Database</h4>
     <div id="main" class="card card-body">
-      <form class="form-inline mb-3" action="/readdepartment" method="get" id="CRUDread">
+      <form 
+        class="form-inline mb-3"
+        action="/readdepartment" 
+        method="get" 
+        id="CRUDread"
+        >
+       
         <b>
           <label for="departmentID">Press <b>"Submit"</b> for Different Departments:</label>
         </b>
@@ -77,18 +83,12 @@
           style="background-color:red;color:white;width:230px;height:40px;" />
         </br>
 
-        <br></bv>
-        <b>
-          <label for="departmentID">Search for specific prodcut info:</label>
-        </b>
-        <input type="text" name="departmentName" placeholder="Enter Product Name" size="200" required autocomplete="off"
-          class="form-control mr-2" />
-        <input type="submit" value="SUBMIT" class="btn btn-dark"
-          style="background-color:red;color:white;width:230px;height:40px;" />
+        <br></bv> 
+         
       </form>
     </div>
   </div>
-  &nbsp;
+
   <div class="container">
     <h3>Something off? Fix it here! [UPDATE]</h3>
     <h4>Updating Information</h4>
@@ -113,7 +113,7 @@
       </form>
     </div>
   </div>
-  &nbsp;
+ 
   <div class="container">
     <h3>No longer exists. Delete it! [DELETE]</h3>
     <h4>Deleting a Department</h4>
